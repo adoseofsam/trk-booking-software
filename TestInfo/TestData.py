@@ -15,6 +15,7 @@ employee_csv = "employee.csv"
 employee_sql = "employee.sql"
 customer_csv = "customer.csv"
 customer_sql = "customer.sql"
+owner_sql ='owner.sql'
 eid = 0
 cid = 0
 emp_count = 10 #number of users 
@@ -117,9 +118,15 @@ def customersql():
     f.write(header)
     f.close()
 
+def ownersql():
+    file = open(owner_sql,"w",encoding='utf-8')
+    file.write("insert into Owner values('TRO00', 'Robert Reid');")
+    file.close()
+
 
 writedata(gendata())
 preparesql() 
 writecustomer(cusdata())
 customersql()
+ownersql()
 

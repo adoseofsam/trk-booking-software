@@ -1,0 +1,1 @@
+insert into Owner values('TRO00', 'Robert Reid');
