@@ -11,10 +11,10 @@ import random, pprint
 faker = Faker()  
 gender = ['M' , 'F']  
 gender_num = len(gender) 
-employee_csv = "employee.csv"
-employee_sql = "employee.sql"
+employee_csv = "employee.csv"                
+employee_sql = "employee.sql" 
 eid = 0
-numofEmployee = 10
+emp_count = 10 #number of users 
 
 #add quotations on each element in a list
 def addquote(string): 
@@ -30,9 +30,9 @@ def listocsv(lis, quotify=True):
     return ",".join(lis)
 
 
-def employeeDesign():
+def employeeDesign():                           
     global eid
-    employee_id = "TR" + str(eid)
+    uid = "TR" + str(eid)
     eid += 1
     global gender
     genders = gender[randint(0, gender_num-1)]
@@ -44,35 +44,35 @@ def employeeDesign():
     dob = faker.date()
     phone = faker.phone_number()
     email = faker.email()
-    address = faker.address()
-    return listocsv([employee_id, fname,lname,address,dob,phone,email])
+    return listocsv([uid, fname , lname , dob, phone , genders , email]) 
 
 
-def employeeGen():
-    lst = []
-    for i in range(numofEmployee):
-        lst.append(employeeDesign)
-    return lst
 
-def employeeCSV(employeeGen):
-    file = open(employee_csv,"w",encoding='utf-8')
-    for i in range(len(employeenum)):
-        file.write(employeenum[i]+"\n")
+def writedata(gendata):                 
+    file = open(employee_csv, "w",encoding='utf-8')
+    for i in range (emp_count):
+        file.write(gendata[i] + "\n")
     file.close()
 
-def employeeSql():
-    e_file = open(employee_csv, "r")
-    e_read = e_file.readlines()
-    header = 'INSERT INTO Employee \n VALUES \n'
-    for i in range(len(e_read)-1):
-        header += '\t'+'('+e_read[i].strip()+ ')' + ',' +'\n'
-    header += '\t'+'('+e_read[-1].strip()+ ')' + ';'
-    e_file.close()
-    empf = open(employee_sql,"w",encoding='utf-8')
-    empf.write(header)
-    empf.close
+def gendata():                  
+    lst=[]
+    for s in range(emp_count):
+        lst.append(employeeDesign())
+    return lst
 
-employeenum = employeeDesign()
-employeeCSV(employeeGen())
-employeeSql()
+def preparesql():
+    File = open(employee_csv, "r")
+    readd = File.readlines()
+    header = 'INSERT INTO User \n VALUES\n'
+    for i in range (len(readd)-1):
+       header += '\t'+ '('+readd[i].strip()+ ')' + ',' +'\n'
+    header += '\t'+ '('+readd[-1].strip()+ ')' + ';'
+    File.close()
+    f = open(employee_sql, "w",encoding='utf-8')
+    f.write(header)
+    f.close()
+
+
+writedata(gendata())
+preparesql() 
 
