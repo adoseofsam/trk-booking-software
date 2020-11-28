@@ -1,12 +1,12 @@
 INSERT INTO User 
  VALUES
-	('TR0','Amy','Lopez','2001-08-14','359-459-0487x996','F','mhardy@gmail.com'),
-	('TR1','Heather','Gamble','1987-11-06','672-625-9142x796','F','pellis@yahoo.com'),
-	('TR2','Lisa','Parker','1975-08-09','(121)165-2256','F','sshaw@hotmail.com'),
-	('TR3','Alicia','Campbell','2020-06-10','001-137-215-9005x3384','F','douglas95@yahoo.com'),
-	('TR4','Cynthia','Morris','2016-03-30','743.928.1360x879','F','sarahdavis@wright-duncan.com'),
-	('TR5','Michelle','Moon','1987-01-04','103.885.2910x71315','F','kellyperry@hotmail.com'),
-	('TR6','Mary','Brooks','1981-08-08','919.043.3857','F','gomeznatalie@yahoo.com'),
-	('TR7','Cynthia','Hunter','2013-09-15','0299220762','F','josephharmon@mcclure-miller.com'),
-	('TR8','Sara','Christian','2013-10-04','874-390-6829','M','shelly44@yahoo.com'),
-	('TR9','Donna','Nelson','1995-01-22','(294)978-0378x92178','M','kathyvasquez@silva-webb.com');
+	('TRE0','Emily','Burns','1987-04-17','(477)119-0002','M','david19@smith.com'),
+	('TRE1','Wendy','Flores','2011-04-15','344.651.2540x579','F','ytaylor@smith-ferguson.net'),
+	('TRE2','Victoria','Fisher','1977-10-09','317-743-1524x487','F','whitney41@hotmail.com'),
+	('TRE3','Melanie','Townsend','1996-07-03','6745991056','F','dennissmith@gilmore.info'),
+	('TRE4','Rose','Le','2001-12-21','316-531-1628','M','amanda47@gmail.com'),
+	('TRE5','Carmen','Thompson','1972-12-18','+1-948-519-5818','F','ruth35@mccall.com'),
+	('TRE6','Judy','Evans','2001-08-30','001-078-396-2724','F','angelicawilliams@hotmail.com'),
+	('TRE7','Ashley','Nielsen','2019-05-22','012.426.3072x18921','F','khull@aguilar.com'),
+	('TRE8','Jennifer','Richardson','1970-08-19','+1-994-085-7900','M','calvarado@gomez-chung.info'),
+	('TRE9','Sonya','Williamson','1980-01-02','001-413-905-1925x9524','M','loganolsen@hotmail.com');
