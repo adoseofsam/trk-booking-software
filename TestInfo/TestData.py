@@ -169,7 +169,7 @@ def cusdata():
 def preparesql():
     File = open(employee_csv, "r")
     readd = File.readlines()
-    header = 'INSERT INTO User \n VALUES\n'
+    header = 'INSERT INTO Employee \n VALUES\n'
     for i in range (len(readd)-1):
        header += '\t'+ '('+readd[i].strip()+ ')' + ',' +'\n'
     header += '\t'+ '('+readd[-1].strip()+ ')' + ';'
@@ -181,7 +181,7 @@ def preparesql():
 def customersql():
     File = open(customer_csv, "r")
     readd = File.readlines()
-    header = 'INSERT INTO User \n VALUES\n'
+    header = 'INSERT INTO Customer \n VALUES\n'
     for i in range (len(readd)-1):
        header += '\t'+ '('+readd[i].strip()+ ')' + ',' +'\n'
     header += '\t'+ '('+readd[-1].strip()+ ')' + ';'
@@ -193,7 +193,7 @@ def customersql():
 def equipsql():
     File = open(equip_csv, "r")
     readd = File.readlines()
-    header = 'INSERT INTO User \n VALUES\n'
+    header = 'INSERT INTO Equipment \n VALUES\n'
     for i in range (len(readd)-1):
        header += '\t'+ '('+readd[i].strip()+ ')' + ',' +'\n'
     header += '\t'+ '('+readd[-1].strip()+ ')' + ';'
@@ -205,7 +205,7 @@ def equipsql():
 def accountsql():
     File = open(account_csv, "r")
     readd = File.readlines()
-    header = 'INSERT INTO User \n VALUES\n'
+    header = 'INSERT INTO Account \n VALUES\n'
     for i in range (len(readd)-1):
        header += '\t'+ '('+readd[i].strip()+ ')' + ',' +'\n'
     header += '\t'+ '('+readd[-1].strip()+ ')' + ';'
