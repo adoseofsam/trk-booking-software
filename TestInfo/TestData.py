@@ -13,6 +13,7 @@ gender = ['M' , 'F']
 year = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22']
 salary = ['8000','8500','9000','9500','10000','10500','11000','11500']
 gender_num = len(gender) 
+equipmentList =["Tent","Chairs","Bounce House", "Party Hats" ]
 employee_csv = "employee.csv"                
 employee_sql = "employee.sql"
 customer_csv = "customer.csv"
@@ -20,9 +21,13 @@ customer_sql = "customer.sql"
 owner_sql ='owner.sql'
 account_csv = "account.csv"
 account_sql = "account.sql"
+equip_sql ="equip.sql"
+equip_csv ="equip.csv"
 eid = 1
 cid = 0
 aid = 0
+eqid = 0
+eq_count = 15
 emp_count = 10 #number of users 
 cus_count = 120 #number of customers
 account_count = 11
@@ -43,6 +48,17 @@ def listocsv(lis, quotify=True):
         return ",".join(list(map(addquote,lis)))
     return ",".join(lis)
 
+def equipmentDesign():
+    global eqid
+    global cid
+    ed = "EQ" + str(eqid)
+    ci = "TRC" + str(cid)
+    eqid += 1
+    cid +=1
+    equip_name = choice(equipmentList)
+    equip_quan = choice(year)
+    date = faker.date()
+    return listocsv([ed,ci,equip_name,equip_quan,date])
 
 def accountDesign():
     global aid
@@ -126,6 +142,17 @@ def gendata():
         lst.append(employeeDesign())
     return lst
 
+def writeeq(eqdata):
+    file = open(equip_csv, "w",encoding='utf-8')
+    for i in range (eq_count):
+        file.write(eqdata[i] + "\n")
+    file.close()
+
+def eqdata():                  
+    lst=[]
+    for s in range(eq_count):
+        lst.append(equipmentDesign())
+    return lst
 
 def writecustomer(cusdata):
     file = open(customer_csv, "w",encoding='utf-8')
@@ -163,6 +190,18 @@ def customersql():
     f.write(header)
     f.close()
 
+def equipsql():
+    File = open(equip_csv, "r")
+    readd = File.readlines()
+    header = 'INSERT INTO User \n VALUES\n'
+    for i in range (len(readd)-1):
+       header += '\t'+ '('+readd[i].strip()+ ')' + ',' +'\n'
+    header += '\t'+ '('+readd[-1].strip()+ ')' + ';'
+    File.close()
+    f = open(equip_sql, "w",encoding='utf-8')
+    f.write(header)
+    f.close()
+
 def accountsql():
     File = open(account_csv, "r")
     readd = File.readlines()
@@ -180,7 +219,8 @@ def ownersql():
     file.write("insert into Owner values('TRE0', 'Robert Reid');")
     file.close()
 
-
+writeeq(eqdata())
+equipsql()
 writedata(gendata())
 preparesql() 
 writecustomer(cusdata())

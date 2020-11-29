@@ -1,12 +1,12 @@
 INSERT INTO User 
  VALUES
-	('TRE1','Danielle','Mayo','2002-08-29',' 2 Trafford Pl Kingston 5','+1-612-524-7457x4076','M','christophergardner@moore.biz'),
-	('TRE2','Heather','Barron','1987-09-20','14a Lady Musgrave Rd Kingston 5','432.377.5793','M','michaelgraves@byrd.com'),
-	('TRE3','Laura','Riley','2012-04-22','30 Knutsford Blvd','920.288.4240x821','F','deannapeterson@hotmail.com'),
-	('TRE4','Kelly','Nguyen','1984-04-04','30 Knutsford Blvd','001-719-806-9427x96998','F','thomas62@hamilton.com'),
-	('TRE5','Dawn','Barton','2007-05-14','30 Knutsford Blvd','577-823-6964x5730','M','jacobsonerica@gill.com'),
-	('TRE6','Patty','Dillon','1981-07-04',' 2 Trafford Pl Kingston 5','956.158.0539','M','matthewlewis@evans.com'),
-	('TRE7','Jessica','Schultz','2013-08-04','615 Border Dr.Grayslake IL 60030','907-392-8210','M','michaelwatson@hotmail.com'),
-	('TRE8','Maria','Santana','1990-08-20','21 Mannings Hill Rd Kingston 8','957-100-2981','F','keithmcguire@alvarado.com'),
-	('TRE9','Faith','Hicks','1990-07-13','9602 Roehampton Ave. Forney TX 75126','(799)738-2154x625','F','oscar87@gmail.com'),
-	('TRE10','Jasmine','Lawson','2009-05-28','136 W. Southampton Lane Shakopee MN 55379','(522)485-5698','F','mbray@gmail.com');
+	('TRE1','Melissa','Bennett','1982-07-28',' 2 Trafford Pl Kingston 5','320-661-5054x057','F','parkerdaniel@smith-smith.com'),
+	('TRE2','Brianna','Foster','1998-03-25','21 Mannings Hill Rd Kingston 8','147.122.8425','M','daniel40@hotmail.com'),
+	('TRE3','Mariah','Lee','1974-11-25','30 Knutsford Blvd','(084)714-8899','M','brownjeffrey@smith.net'),
+	('TRE4','Amanda','Howard','1984-06-19','30 Knutsford Blvd','(627)726-4186','F','lindarodriguez@yahoo.com'),
+	('TRE5','Vanessa','Allen','1997-08-20','14a Lady Musgrave Rd Kingston 5','342.333.0050x496','F','rowerobert@contreras-wright.org'),
+	('TRE6','Amy','Bruce','2015-05-18','29 Passagefort Dr Portmore','972.901.2977x2522','M','kathryn70@hunt-moore.com'),
+	('TRE7','Christina','Hawkins','1977-07-30','14a Lady Musgrave Rd Kingston 5','458.350.4234x857','M','fernandezlaura@le-moore.com'),
+	('TRE8','Ann','Shepherd','2018-09-23','615 Border Dr.Grayslake IL 60030','045-836-5814','M','lavila@montes-price.biz'),
+	('TRE9','Lori','Barton','2018-03-14','52 Grenada Cres Kingston 5','212.007.0949','M','latoya25@yahoo.com'),
+	('TRE10','Emily','Mendoza','1970-07-24','22 Little Premier Plaza Kingston 10Gordon Town Road Kingston 6','062-969-2310x8621','F','zhansen@yahoo.com');
