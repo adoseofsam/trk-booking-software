@@ -10,7 +10,13 @@ if(isset($POST)){
     $stmt = $conn->query("SELECT*FROM Employee");
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    
+    foreach($result as $row){
+        if(($row['userid'] == $user_id) && ($row['password'] == md5($pwd))){
+            $_SESSION['current_user'] = $user_id;
+            echo "true";
+            break;
+        }
+    }
 
 }
 
@@ -18,4 +24,3 @@ if(isset($POST)){
 
 
 
-}
