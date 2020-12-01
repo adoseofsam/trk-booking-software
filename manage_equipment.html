@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manage Equipment </title>
+    <link href="manage_equipment.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <br><br>
+    <div id="bd">
+        <div class="left">
+            <table id="tbb">
+                <caption>List of Equipment</caption>
+                <th>Equipment ID</th>
+                <th>Equipment Name</th>
+                <th>Unit Price</th>
+                <th>Equipment Quantity</th>
+            </table>
+        </div>
+        <div class="right">
+            <div>
+                <form action="manage_equipment.php" method="POST">
+                    <table id="tbb">
+                        <caption>Add new Equipment</caption>
+
+                        <tr>
+                            <td>Equipment Name</td>
+                            <td><input type="text" name="equipmentName"></td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td><input type="number" name="equipmentPrice"></td>
+                        </tr>
+                        <tr>
+                            <td>Quantity</td>
+                            <td><input type="number" name="equipmentQuantity"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td> <input type="submit" name="add_new_equipment" value="Add Equipment"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div>
+                <br>
+                <form action="manage_equipment.php" method="POST">
+                    <table id="tbb">
+                        <caption>Update Equipment</caption>
+                        <tr>
+                            <td>Enter ID</td>
+                            <td><input type="number" name="equipmentId"></td>
+                        </tr>
+                        <tr>
+                            <td>Enter New Name</td>
+                            <td><input type="text" name="equipmentName"></td>
+                        </tr>
+                        <tr>
+                            <td>New Price</td>
+                            <td><input type="number" name="equipmentPrice"></td>
+                        </tr>
+                        <tr>
+                            <td>New Quantity</td>
+                            <td><input type="number" name="equipmentQuantity"></td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td> <input type="submit" name="update_equipment" value="Update Equipment"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div>
+                <br>
+                <form action="manage_equipment.php" method="POST">
+                    <table id="tbb">
+                        <caption>Add Quantity</caption>
+                        <tr>
+                            <td>Enter ID</td>
+                            <td><input type="number" name="equipmentId"></td>
+                        </tr>
+                        <tr>
+                            <td>Add Quantity</td>
+                            <td><input type="number" name="equipmentQuantity"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td> <input type="submit" name="add_quantity" value="Add Quantity"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
