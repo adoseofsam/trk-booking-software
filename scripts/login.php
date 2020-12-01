@@ -16,6 +16,9 @@ if(isset($POST)){
             echo "true";
             break;
         }
+        else{
+            echo "Failed to login";
+        }
     }
 
 }
