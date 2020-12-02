@@ -1,0 +1,23 @@
+#search {
+    box-sizing: border-box;
+  }
+  
+  
+  
+#bookingInfo {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+  }
+  
+#bookingInfo th, #myInfo td {
+    text-align: left;
+    padding: 12px;
+  }
+  
+#bookingInfo tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  
