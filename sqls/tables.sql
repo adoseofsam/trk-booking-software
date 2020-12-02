@@ -13,6 +13,14 @@ CREATE TABLE Employee(
     primary key(employee_id)
 );
 
+CREATE TABLE TRKOwner(
+    employee_id varchar(10),
+    first_name varchar(25),
+    last_name varchar(25),
+    email varchar (50),
+    primary key(employee_id)
+);
+
 CREATE TABLE Customer(
     customer_id varchar(10),
     first_name varchar(25),

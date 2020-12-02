@@ -25,7 +25,7 @@ equip_sql ="equip.sql"
 equip_csv ="equip.csv"
 book_csv ="book.csv"
 book_sql = "book.sql"
-eid = 1
+eid = 0
 cid = 0
 aid = 0
 eqid = 0
@@ -117,15 +117,24 @@ def employeeDesign():
     eid += 1
     global gender
     genders = gender[randint(0, gender_num-1)]
-    if gender == 'M':
-        fname = faker.first_name_male()
+    if uid == "TRE0":
+        fname = "Robert"
+        lname ="Reid"
+        email = "robert@gmail.com"
     else:
-        fname = faker.first_name_female()
-    lname = faker.last_name()
+        position ="Employee"
+        if gender == 'M':
+            fname = faker.first_name_male()
+            lname =  faker.last_name()
+            email = faker.email()
+        else:
+            fname = faker.first_name()
+            lname =  faker.last_name()
+            email = faker.email()
     dob = faker.date()
     address = choice(addresses)
     phone = faker.phone_number()
-    email = faker.email()
+    
     return listocsv([uid, fname , lname , dob,address, phone , genders , email]) 
 
 
@@ -263,7 +272,7 @@ def booksql():
 
 def ownersql():
     file = open(owner_sql,"w",encoding='utf-8')
-    file.write("insert into Owner values('TRE0', 'Robert Reid');")
+    file.write("insert into Owner values('TRE0', 'Robert Reid','robert@gmail.com');")
     file.close()
 
 

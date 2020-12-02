@@ -1,1 +1,1 @@
-insert into Owner values('TRE0', 'Robert Reid');
+insert into Owner values('TRE0', 'Robert Reid','robert@gmail.com');

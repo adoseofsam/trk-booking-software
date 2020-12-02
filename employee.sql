@@ -1,12 +1,12 @@
 INSERT INTO Employee 
  VALUES
-	('TRE1','Wendy','Mathis','1999-03-02','14a Lady Musgrave Rd Kingston 5','7925078870','F','parkerdaniel@gmail.com'),
-	('TRE2','Donna','Nelson','1972-10-12','29 Passagefort Dr Portmore','(235)065-9081','M','candacemathis@hotmail.com'),
-	('TRE3','Megan','Pearson','1993-03-09','136 W. Southampton Lane Shakopee MN 55379','697-724-2068','F','edwardstimothy@johnson-church.org'),
-	('TRE4','Adriana','Charles','2004-07-27','9602 Roehampton Ave. Forney TX 75126','001-790-444-3347x176','F','jlopez@thompson.com'),
-	('TRE5','Ashley','Owens','1997-03-21','136 W. Southampton Lane Shakopee MN 55379','478-985-4241','M','jonathan83@gmail.com'),
-	('TRE6','Kara','Joseph','1986-03-18','29 Passagefort Dr Portmore','146-011-8267','F','rebeccapeters@hernandez.com'),
-	('TRE7','Angelica','Dawson','2020-08-19',' 2 Trafford Pl Kingston 5','640-251-3146x481','M','mcbridechristine@wilson.com'),
-	('TRE8','Anna','Thompson','1999-05-11','615 Border Dr.Grayslake IL 60030','(675)469-6250','F','sperez@murphy.com'),
-	('TRE9','Erica','Guzman','2002-02-17','136 W. Southampton Lane Shakopee MN 55379','001-692-810-1860','M','william28@jackson.biz'),
-	('TRE10','Ashley','Wilcox','1970-05-30','1a Gretna Green Ave Kingston 11','(227)638-2898x20260','F','jonesandrew@thomas-owens.net');
+	('TRE0','Robert','Reid','1975-06-10','9602 Roehampton Ave. Forney TX 75126','688-093-6719x454','M','robert@gmail.com'),
+	('TRE1','Barbara','Ferguson','2011-07-22','9602 Roehampton Ave. Forney TX 75126','307-313-0888x26759','F','qmitchell@yahoo.com'),
+	('TRE2','Jessica','Castro','1997-01-10','615 Border Dr.Grayslake IL 60030','(966)703-9587','F','dbailey@bradshaw.org'),
+	('TRE3','Amy','Turner','1970-01-06','30 Knutsford Blvd','+1-813-383-9433','M','hillsusan@gmail.com'),
+	('TRE4','Ryan','Castro','2016-05-27','136 W. Southampton Lane Shakopee MN 55379','799-840-6031x574','F','zryan@hotmail.com'),
+	('TRE5','Valerie','Cruz','1989-05-02','22 Little Premier Plaza Kingston 10Gordon Town Road Kingston 6','001-670-780-5585x33909','F','eriktran@arnold-mcmahon.com'),
+	('TRE6','Richard','Silva','1985-10-13',' 16 Tangerine Pl Kingston 10','1180307412','F','makaylasmith@yahoo.com'),
+	('TRE7','Audrey','Sanchez','2014-11-02','1a Gretna Green Ave Kingston 11','(150)570-6555x3915','M','gmorris@yahoo.com'),
+	('TRE8','Thomas','Martin','1975-02-09','615 Border Dr.Grayslake IL 60030','001-360-592-2740x9725','M','dweber@yahoo.com'),
+	('TRE9','Joshua','Morris','2014-08-30','1a Gretna Green Ave Kingston 11','496.663.2074','M','xgibson@yahoo.com');
