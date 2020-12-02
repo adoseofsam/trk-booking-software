@@ -6,8 +6,8 @@ CREATE TABLE Employee(
     first_name varchar(25),
     last_name varchar(25),
     dob date,
-    emp_address varchar(50),
-    contact varchar(15),
+    emp_address varchar(80),
+    contact varchar(25),
     gender varchar(1),
     email varchar(50),
     primary key(employee_id)
@@ -36,10 +36,11 @@ CREATE TABLE Account(
     first_name varchar(25),
     last_name varchar(25),
     emp_address varchar(50),
+    years integer,
     title varchar(10),
     salary decimal(10,2),
     primary key(employee_id),
-    foreign key (employee_id) references Employee(employee_id) on delete cascade on update cascade 
+    foreign key (employee_id) references Employee(employee_id) on delete cascade
 );
 
 CREATE TABLE Booking(
