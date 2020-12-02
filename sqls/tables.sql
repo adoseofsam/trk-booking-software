@@ -19,12 +19,12 @@ CREATE TABLE Customer(
     last_name varchar(25),
     cus_address varchar(50),
     email varchar(50),
-    phone varchar(15),
+    phone varchar(30),
     primary key(customer_id)
 
 );
 
-CREATE TABLE Login(
+CREATE TABLE EmpLogin(
     employee_id varchar(10),
     password varchar(15),
     primary key(employee_id),

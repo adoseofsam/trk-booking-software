@@ -73,9 +73,13 @@ def bookDesign():
     global bid
     global cid 
     eqqid = "TREQ" + str(eid)
+    eid += 1
     boid = "TRBO" + str(bid)
+    bid += 1
     cuid = "TRC" + str(cid)
+    cid +=1
     empid = "TRE" + str(eqid)
+    eqid += 1
     venue = choice(equipmentList)
     date = faker.date()
     time = faker.time()
