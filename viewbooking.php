@@ -3,13 +3,13 @@
 
 <head>
 <title>View Booking</title>
-<link rel="stylesheet" href="viewb.css"> 
-<script type="text/javascript" src="viewb.js"></script>
+<link rel="stylesheet" href="viewbooking.css"> 
+<script type="text/javascript" src="viewbooking.js"></script>
 </head>
 
 <body>
 
-  <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for Booking" title="Type a Booking Name">
+  <input type="text" id="search" onkeyup="myFunction()" placeholder="Search for Booking" title="Type a Booking Name"> 
 
   <table id="bookingInfo">
 
@@ -41,7 +41,7 @@
         if ($result->num_rows > 0) {
             
             while($row = $result-> fetch_assoc()) {
-                echo "<tr><td>" . $row["Event"]. "</td><td>" . $row["Client"]. "</td><td>" . $row["Venue"]. "</td><td>" . $row["Date"]. "</td><td>" . $row["Time"]. "</td><td>" . $row["Equipment"]. "</td><td>" . "</td></tr>";
+                echo "<tr><td>" . $row["Event"]. "</td><td>" . $row["Client"]. "</td><td>" . $row["Venue"]. "</td><td>" . $row["Date"]. "</td><td>" . $row["Time"]. "</td><td>" . $row["Equipment"]. "</td></tr>";
             }
             echo "</table>";
             } else {
