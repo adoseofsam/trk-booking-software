@@ -1,7 +1,19 @@
+table {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+th, td {
+    border: 1px solid black;
+}
+
 
  .tab{
-    float:left;
+    float:right;
     margin:50px;
+    padding:30px;
     }
 
 .tab input{
