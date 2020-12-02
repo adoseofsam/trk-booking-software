@@ -1,0 +1,101 @@
+body {
+    width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  div.elem-group {
+    margin: 20px 0;
+  }
+
+  
+  div.elem-group.inlined {
+    width: 49%;
+    display: inline-block;
+    margin-left: 1%;
+  }
+  
+  label {
+    display: block;
+    font-family: 'Nanum Gothic';
+    padding-bottom: 10px;
+    font-size: 1.25em;
+  }
+  
+  input, select, textarea {
+    border-radius: 2px;
+    border: 2px solid #777;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    font-family: 'Gill Sans';
+    width: 100%;
+    padding: 10px;
+  }
+  
+  div.elem-group.inlined input {
+    width: 95%;
+    display: inline-block;
+  }
+  
+  textarea {
+    height: 250px;
+  }
+  .bold td{
+      display: none;
+  }
+  
+  hr {
+    border: 1px dotted #ccc;
+  }
+  
+  button {
+    height: 50px;
+    background: white;
+    border: none;
+    color:black;
+    font-size: 1.25em;
+    font-family: 'Gill SansS';
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    border: 2px solid black;
+  }
+  body {
+    background-color:lightpink;
+    font: 1rem 'Open Sans', sans-serif;
+  }
+  .aright {
+    text-align: right;
+  }
+  .tbl {
+    border-collapse: collapse;
+    margin: 2em auto;
+    table-layout: fixed;
+  }
+  .tbl caption {
+    font-weight: 700;
+    padding-bottom: 1em;
+    text-align: left;
+  }
+  .tbl th {
+    background-color: cornflowerblue;
+    font-weight: bold;
+    text-align: left;
+  }
+  .tbl td, .tbl th {
+    border: 1px solid black;
+    padding: 2px 4px;
+    vertical-align: top;
+  }
+  .tbl tbody tr:nth-child(odd) {
+    background-color: #cde;
+  }
+  .tbl tbody tr:nth-child(even) {
+    background-color: #fff;
+  }
+  .tbl tbody tr:hover {
+    background-color: #b0b0b0;
+  }
+  
