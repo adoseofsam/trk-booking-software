@@ -1,33 +1,14 @@
-#bd {
-    margin-left: 220px;
-}
 
-.left {
-    width: 700px;
-    float: left;
-}
-
-.right {
-    width: 400px;
-    float: right;
-}
-
-#tbb {
-    border-collapse: collapse;
-}
-
-    #tbb th {
-        text-align: left;
-        background-color: #3a6070;
-        color: #FFF;
-        padding: 4px 30px 4px 8px;
+ .tab{
+    float:left;
+    margin:50px;
     }
 
-    #tbb td {
-        border: 1px solid #e3e3e3;
-        padding: 4px 8px;
-    }
+.tab input{
+    display: block;
+    margin-bottom:15px;
+}
 
-#cd {
-    margin-left: 300px;
+tr:hover{
+    background-color:gray;
 }

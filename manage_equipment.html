@@ -3,99 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Manage Equipment </title>
-    <link href="manage_equipment.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="manage_equipment.css">
+    <script src="manage_equipment.js"></script>
 </head>
 <body>
 
-    <br><br>
-    <div id="bd">
-        <div class="left">
-            <table id="tbb">
-                <caption>List of Equipment</caption>
+    <div>
+        <table id="tbb">
+            <tr>
                 <th>Equipment ID</th>
                 <th>Equipment Name</th>
-                <th>Unit Price</th>
+                <th>Equipment Price</th>
                 <th>Equipment Quantity</th>
-            </table>
-        </div>
-        <div class="right">
-            <div>
-                <form action="manage_equipment.php" method="POST">
-                    <table id="tbb">
-                        <caption>Add new Equipment</caption>
-
-                        <tr>
-                            <td>Equipment Name</td>
-                            <td><input type="text" name="equipmentName"></td>
-                        </tr>
-                        <tr>
-                            <td>Price</td>
-                            <td><input type="number" name="equipmentPrice"></td>
-                        </tr>
-                        <tr>
-                            <td>Quantity</td>
-                            <td><input type="number" name="equipmentQuantity"></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td> <input type="submit" name="add_new_equipment" value="Add Equipment"></td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
-            <div>
-                <br>
-                <form action="manage_equipment.php" method="POST">
-                    <table id="tbb">
-                        <caption>Update Equipment</caption>
-                        <tr>
-                            <td>Enter ID</td>
-                            <td><input type="number" name="equipmentId"></td>
-                        </tr>
-                        <tr>
-                            <td>Enter New Name</td>
-                            <td><input type="text" name="equipmentName"></td>
-                        </tr>
-                        <tr>
-                            <td>New Price</td>
-                            <td><input type="number" name="equipmentPrice"></td>
-                        </tr>
-                        <tr>
-                            <td>New Quantity</td>
-                            <td><input type="number" name="equipmentQuantity"></td>
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td> <input type="submit" name="update_equipment" value="Update Equipment"></td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
-            <div>
-                <br>
-                <form action="manage_equipment.php" method="POST">
-                    <table id="tbb">
-                        <caption>Add Quantity</caption>
-                        <tr>
-                            <td>Enter ID</td>
-                            <td><input type="number" name="equipmentId"></td>
-                        </tr>
-                        <tr>
-                            <td>Add Quantity</td>
-                            <td><input type="number" name="equipmentQuantity"></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td> <input type="submit" name="add_quantity" value="Add Quantity"></td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
-        </div>
+            </tr>
+        </table>
     </div>
+    <div class="tab">
+        <label>Equipment ID:</label>
+        <input type="text" name="equipmentID" id="equipmentID">
+
+        <label>Equipment Name:</label>
+        <input type="text" name="equipmentName" id="equipmentName">
+
+        <label>Equipment Price:</label>
+        <input type="number" name="equipmentPrice" id="equipmentPrice">
+
+        <label>Equipment QuantityName:</label>
+        <input type="number" name="equipmentQuantity" id="equipmentQuantity">
+
+        <button id="new">Add</button>
+        <button id="edit">Update</button>
+        <button id="remove">Delete</button>
+    </div>        
 </body>
 </html>
