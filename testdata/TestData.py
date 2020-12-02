@@ -23,13 +23,17 @@ account_csv = "account.csv"
 account_sql = "account.sql"
 equip_sql ="equip.sql"
 equip_csv ="equip.csv"
+book_csv ="book.csv"
+book_sql = "book.sql"
 eid = 1
 cid = 0
 aid = 0
 eqid = 0
+bid = 0
 eq_count = 15
 emp_count = 10 #number of users 
 cus_count = 120 #number of customers
+book_count = 150
 account_count = 11
 addresses = ['9602 Roehampton Ave. Forney TX 75126' , '136 W. Southampton Lane Shakopee MN 55379', '615 Border Dr.Grayslake IL 60030', '935 W. Depot St.Fort Wayne IN 46804','14a Lady Musgrave Rd Kingston 5', ' 16 Tangerine Pl Kingston 10', '22 Little Premier Plaza Kingston 10'
               'Gordon Town Road Kingston 6', '52 Grenada Cres Kingston 5' , '21 Mannings Hill Rd Kingston 8' , '29 Passagefort Dr Portmore', ' 2 Trafford Pl Kingston 5', '1a Gretna Green Ave Kingston 11','30 Knutsford Blvd','30 Knutsford Blvd']
@@ -51,11 +55,11 @@ def listocsv(lis, quotify=True):
 def equipment():
     """ gen equipment. handle reverse equip with a trigger or stored procedure in database. """
     ecount = 3 #number of equipment each customer can rent for eg
-    ucount = 200 #number of customers to give equipment to
+    ucount = 30 #number of customers to give equipment to
 
     equipment = {} #storing r/ship between customer and equip
     for i in range(1,ucount+1):
-        eid = "EQ" + str(i)
+        eid = "TREQ" + str(i)
         equipment[eid] = ["TRC" + str(x) for x in range(i+1,i+1+ecount)]
     
     # flist = list(groupss.items())
@@ -63,20 +67,20 @@ def equipment():
     # pprint.pprint(flist)
 
     return equipment
+def bookDesign():
+    global eid
+    global eqid
+    global bid
+    global cid 
+    eqqid = "TREQ" + str(eid)
+    boid = "TRBO" + str(bid)
+    cuid = "TRC" + str(cid)
+    empid = "TRE" + str(eqid)
+    venue = choice(equipmentList)
+    date = faker.date()
+    time = faker.time()
+    return listocsv([boid,cuid,empid,eqqid,venue,date,time])
 
-
-
-# def equipmentDesign():
-#     global eqid
-#     global cid
-#     ed = "EQ" + str(eqid)
-#     ci = "TRC" + str(cid)
-#     eqid += 1
-#     cid +=1
-#     equip_name = choice(equipmentList)
-#     equip_quan = choice(year)
-#     date = faker.date()
-#     return listocsv([ed,ci,equip_name,equip_quan,date])
 
 def accountDesign():
     global aid
@@ -160,6 +164,18 @@ def gendata():
         lst.append(employeeDesign())
     return lst
 
+def writebook(genbook):
+    file = open(book_csv, "w",encoding='utf-8')
+    for i in range (book_count):
+        file.write(genbook[i] + "\n")
+    file.close()
+
+
+def genbook():
+    lst=[]
+    for i in range(book_count):
+        lst.append(bookDesign())
+    return lst
 
 def eqToCsv():
     f = open(equip_csv, "w")
@@ -229,6 +245,18 @@ def accountsql():
     f.write(header)
     f.close()
 
+def booksql():
+    File = open(book_csv, "r")
+    readd = File.readlines()
+    header = 'INSERT INTO Booking \n VALUES\n'
+    for i in range (len(readd)-1):
+       header += '\t'+ '('+readd[i].strip()+ ')' + ',' +'\n'
+    header += '\t'+ '('+readd[-1].strip()+ ')' + ';'
+    File.close()
+    f = open(book_sql, "w",encoding='utf-8')
+    f.write(header)
+    f.close()
+
 def ownersql():
     file = open(owner_sql,"w",encoding='utf-8')
     file.write("insert into Owner values('TRE0', 'Robert Reid');")
@@ -240,6 +268,8 @@ eqToCsv()
 equipsql()
 writedata(gendata())
 preparesql() 
+writebook(genbook())
+booksql()
 writecustomer(cusdata())
 customersql()
 ownersql()
