@@ -4,8 +4,6 @@ session_start();
 require_once 'connectdb.php';
 
 if(isset($POST)){
-<<<<<<< HEAD
-=======
     $user_id = $_POST["userid"];
     $pwd = $_POST["password"];
 
@@ -22,7 +20,6 @@ if(isset($POST)){
             echo "Failed to login";
         }
     }
->>>>>>> manage-account
 
 }
 
@@ -30,7 +27,4 @@ if(isset($POST)){
 
 
 
-<<<<<<< HEAD
 }
-=======
->>>>>>> manage-account
