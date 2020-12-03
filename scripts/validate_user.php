@@ -13,11 +13,11 @@ if (isset($_POST)) {
     foreach($results as $row) {
         if($row['robert@gmail.com'] === $email) {
             $flag = false;
-            header("Location: manage-account.php")
+            header("Location: manage-account.php");
         }
         elseif($row['email'] == $email){
             $flag = false;
-            header("Location: booking.php")
+            header("Location: booking.php");
             
         }
         else{
