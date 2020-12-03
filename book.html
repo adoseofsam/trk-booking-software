@@ -20,21 +20,36 @@
 
       <form name = "adduserForm" action="dbconnect.php" onsubmit="myFunction()" method="post" method="post">
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" >
+        <input type="text" id="fname" name="firstname" placeholder="John" required>
       
         <label for="lname">Last Name</label>
-        <input type="text" id="lfname" name="lastname" >
+        <input type="text" id="lfname" name="lastname" placeholder= "Brown" required>
         
         <label for="email"> Email </label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" placeholder="johnbrown@mail.com" required>
 
         <label for="address_"> Address </label>
-        <input type="address_" id="address_" name="address_">
+        <input type="address_" id="address_" name="address_"placeholder="124 Street Kingston 5" required >
 
         <label for="phone"> Phone</label>
-        <input type="tel" id="phone" name="phone">
+        <input type="tel" id="phone" name="phone" placeholder="8769091235" required>
+        <br></br>   
+        <tr>
+          <td> Please select Equipment:</td>
+          <br></br>
+          <td>Trampoline <input type="checkbox" value ="Trampoline" name="equipment[]">
+              Zipline <input type="checkbox" value ="Zipline" name="equipment[]">
+              Large-WaterSlide <input type="checkbox" value ="Large-WaterSlide" name="equipment[]">
+              Small-WaterSlide <input type="checkbox" value ="Small-WaterSlide" name="equipment[]">
+              Tent-20x20 <input type="checkbox" value ="Tent-20x20" name="equipment[]">
+              Tent-10x20 <input type="checkbox" value ="Tent-10x20" name="equipment[]">
+              Tent-10x10 <input type="checkbox" value ="Tent-10x10" name="equipment[]">
+          </td>
+        </tr>
 
-        <table class="tbl">
+
+
+        <!-- <table class="tbl">
           <caption>Selected <span id="selitems">0 items - JMD 0.00</span></caption>
           <thead>
             <tr>
@@ -114,7 +129,7 @@
               <td class="aright">500</td>
             </tr>
           </tbody>
-        </table>
+        </table> -->
         <div class="elem-group">
           <label for="date_rent">Select a date </label>
           <input type="date" id="date_rent" name="date_rent" required>

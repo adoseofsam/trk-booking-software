@@ -8,7 +8,8 @@ try {
     $email = $_POST['email'];
     $address_=$_POST['address_'];
     $phone=$_POST['phone'];
-    $sel=$_POST['sel'];
+    $equipment=$_POST['equipment'];
+    $chkstr = implode ("," ,$equipment);
     $date_rent=$_POST['date_rent'];
 
     //regex
@@ -54,8 +55,8 @@ try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password1);
     echo "Connected to $dbname at $host";
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT into bookinfo (firstname, lastname, email, address_, phone, sel, date_rent)
-    VALUES ('$firstname','$lastname','$email','$address_','$phone','$sel' , '$date_rent')";
+    $sql = "INSERT into bookinfo (firstname, lastname, email, address_, phone, equipment, date_rent)
+    VALUES ('$firstname','$lastname','$email','$address_','$phone','$chkstr', '$date_rent')";
     $conn->exec($sql);
     $referer = $_SERVER['HTTP_REFERER'];
     header("Location: $referer");
@@ -66,20 +67,6 @@ try {
 }
 $conn = null;
 
-
-foreach($checkbox1 as $chk1)  
-   {  
-      $chk .= $chk1.",";  
-   }  
-$in_ch=mysqli_query($con,"insert into bookinfo (equipment) values ('$chk')");  
-if($in_ch==1)  
-   {  
-      echo'<script>alert("Inserted Successfully")</script>';  
-   }  
-else  
-   {  
-      echo'<script>alert("Failed To Insert")</script>';  
-   } 
 ?>
 
 
