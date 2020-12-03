@@ -26,7 +26,7 @@
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "testerdb";
+        $dbname = "bookdb";
 
      
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -35,7 +35,7 @@
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT Event, Client, Venue, Date, Time, Equipment  FROM testdata";
+        $sql = "SELECT Event, Client, Venue, Date, Time, Equipment FROM testdata ORDER BY Event ASC";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
