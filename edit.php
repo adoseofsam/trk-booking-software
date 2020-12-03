@@ -42,10 +42,3 @@
 $conn->close();
 
 
-?>
-<!--  -->
-
-<!--
-Display all item in post
-echo "<pre>"; print_r($_POST) ;  echo "</pre>";
--->
