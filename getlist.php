@@ -16,7 +16,7 @@
 <html>
 <head>
 	<h1> Edit Booking </h1>
-	<script type="text/javascript" src="valid.js"></script>
+	<script type="text/javascript" src="..scripts/valid.js"></script>
 	<title>Edit Booking</title>
 
 </head>
