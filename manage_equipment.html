@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manage Equipment </title>
+    <link rel="stylesheet" href="manage_equipment.css">
+    <script src="manage_equipment.js"></script>
+</head>
+<body>
+
+    <div>
+        <table id="tbb">
+            <tr>
+                <th>Equipment ID</th>
+                <th>Equipment Name</th>
+                <th>Equipment Price</th>
+                <th>Equipment Quantity</th>
+            </tr>
+            <tr>
+                <td>TRK1000</td>
+                <td>Bounce-a-Bout</td>
+                <td>12000</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>TRK1001</td>
+                <td>20x20 Tent</td>
+                <td>10000</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>TRK1002</td>
+                <td>Chair</td>
+                <td>150</td>
+                <td>250</td>
+            </tr>
+        </table>
+    </div>
+    <div class="tab">
+        <label>Equipment ID:</label>
+        <input type="text" name="equipmentID" id="equipmentID">
+
+        <label>Equipment Name:</label>
+        <input type="text" name="equipmentName" id="equipmentName">
+
+        <label>Equipment Price:</label>
+        <input type="number" name="equipmentPrice" id="equipmentPrice">
+
+        <label>Equipment QuantityName:</label>
+        <input type="number" name="equipmentQuantity" id="equipmentQuantity">
+
+        <button id="new">Add</button>
+        <button id="edit">Update</button>
+        <button id="remove">Delete</button>
+    </div>        
+</body>
+</html>
