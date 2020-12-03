@@ -1,3 +1,8 @@
+.prior{
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
 body{
     height: 100%;
     font-family: sans-serif;
@@ -7,6 +12,10 @@ body{
     background-color: white; 
 }
 
+.container{
+    align-items: center;
+    justify-content: center;
+}
 
 input{
     width: 400px;
@@ -27,5 +36,3 @@ input{
     background-color: steelblue;
     border-radius: 4px;
 }
-
-

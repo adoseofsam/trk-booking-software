@@ -25,14 +25,9 @@ equip_sql ="equip.sql"
 equip_csv ="equip.csv"
 book_csv ="book.csv"
 book_sql = "book.sql"
-login_csv = "login.csv"
-login_sql ="login.sql"
-Availability = ["Available", "Not Available"]
 eid = 0
-empl = 0
 cid = 0
 aid = 0
-ccount = 0
 eqid = 0
 bid = 0
 eq_count = 15
@@ -132,34 +127,21 @@ def employeeDesign():
             fname = faker.first_name_male()
             lname =  faker.last_name()
             email = faker.email()
-
         else:
             fname = faker.first_name()
             lname =  faker.last_name()
             email = faker.email()
-
     dob = faker.date()
     address = choice(addresses)
     phone = faker.phone_number()
     
     return listocsv([uid, fname , lname , dob,address, phone , genders , email]) 
 
-def empDesign():
-    global empl
-    emp = "TRE" + str(empl)
-    empl += 1
-    if emp == "TRE0":
-        email = "robert@gmail.com"
-        pwd = "hithere"
-    else:
-        email = faker.email()
-        pwd = "hello123"
-    return listocsv([emp,email,pwd])     
 
 def customerDesign():
-    global ccount
-    cusid = "TRC" + str(ccount)
-    ccount += 1
+    global cid
+    cusid = "TRC" + str(cid)
+    cid += 1
     if gender == 'M':
         fname = faker.first_name_male()
     else:
@@ -169,18 +151,6 @@ def customerDesign():
     email = faker.email()
     phone = faker.phone_number()
     return listocsv([cusid,fname,lname,address,email,phone])
-
-
-def genlogin():                  
-    lst=[]
-    for s in range(emp_count):
-        lst.append(empDesign())
-    return lst
-def writelogin(genlogin):                 
-    file = open(login_csv, "w",encoding='utf-8')
-    for i in range (emp_count):
-        file.write(genlogin[i] + "\n")
-    file.close()
 
 def genaccount():
     lst=[]
@@ -224,7 +194,7 @@ def eqToCsv():
     f = open(equip_csv, "w")
     for key, val in equipm.items():
         for v in val:
-            f.write(f" '{key}','{v}','{choice(Availability)}','{choice(equipmentList)}','{choice(year)}'\n")
+            f.write(f" '{key}','{v}','{choice(equipmentList)}','{choice(year)}','{faker.date()}'\n")
     f.close()
 
 
@@ -300,21 +270,9 @@ def booksql():
     f.write(header)
     f.close()
 
-def loginsql():
-    File = open(login_csv, "r")
-    readd = File.readlines()
-    header = 'INSERT INTO EmpLogin \n VALUES\n'
-    for i in range (len(readd)-1):
-       header += '\t'+ '('+readd[i].strip()+ ')' + ',' +'\n'
-    header += '\t'+ '('+readd[-1].strip()+ ')' + ';'
-    File.close()
-    f = open(login_sql, "w",encoding='utf-8')
-    f.write(header)
-    f.close()
-
 def ownersql():
     file = open(owner_sql,"w",encoding='utf-8')
-    file.write("insert into TRKOwner values('TRE0', 'Robert','Reid','robert@gmail.com');")
+    file.write("insert into Owner values('TRE0', 'Robert Reid','robert@gmail.com');")
     file.close()
 
 
@@ -323,8 +281,6 @@ eqToCsv()
 equipsql()
 writedata(gendata())
 preparesql() 
-writelogin(genlogin())
-loginsql()
 writebook(genbook())
 booksql()
 writecustomer(cusdata())
