@@ -72,4 +72,5 @@ function toNumber(num) {
 
   function myFunction() {
     alert("The form was submitted");
+
   }
